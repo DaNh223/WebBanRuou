@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/account_style.css">
+    <!-- <link rel="stylesheet" href="./assets/style_demo.css"> -->
+    <link rel="stylesheet" href="./assets/color.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header --> 
+    <div id="header">
+        <div class="nav_bar">
+            <a href="./index.html" class="sign">
+            </a>
+            <div class="nav_right">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="./index.html">Homepages</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="./about.html">About Us</a>
+                    </li>
+
+                    <li class="nav_item nav_shop">
+                        <a href="#">Shop</a>
+
+                        <ul class="subnav">
+                            <li class="subnav_item"><a href="./shop.html">Shop Page</a></li>
+                            <li class="subnav_item"><a href="./checkout.html">Check Out</a></li>
+                            <li class="subnav_item"><a href="./account.html">My Account</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="./blog.html">Blog</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="./contact.html">Contact</a>
+                    </li>
+                </ul>   
+
+                <div class="nav_btns">
+                    <div class="wine_btn">
+                        <a href="404.html">Wine From $40</a>
+                    </div>
+                    <a href="./cart.html" style="text-decoration: none;">
+                        <d class="cart_btn">
+                            <p class="money">$0.00</p>
+                            <i class="ti-shopping-cart"></i>
+                            <div class="cart_quantity">
+                                <p>0</p>
+                            </div>
+                        </d>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End header -->
+
+    <div id="content">
+        <div id="title">
+            <div class="title_content">
+                <h1 class="title_header">My Account</h1>
+                <p class="title_info">Get Winery News, Promotions, & Tastings Exclusively.</p>
+            </div>
+        </div>
+
+        <div id="form_container" class="form_container">
+            <div class="button_box">
+                <div id="btn"></div>
+                <div id = "btn_left" class="toggle_btn" onclick="login()"><p>Login</p></div>
+                <div id = "btn_right" class="toggle_btn" onclick="register()"><p>Register</p></div>
+            </div>
+
+            <div id="login_form">
+                <!-- <p class="form_title">Login</p> -->
+                <div class="login_container">
+                    <p class="form_title">Login</p>
+                    <div class="login_title">
+                        <p class="login_info">Username or email address</p>
+                        <span class="required">*</span> 
+                    </div>
+                    
+                    <input type="text" name="" id="input_email" class="login_input">
+
+                    <div class="login_title">
+                        <p class="login_info">Password</p>
+                        <span class="required">*</span> 
+                    </div>
+
+                    <div class="pass_input">
+                        <input type="password" id="input_password" class="login_input">
+                        <div class="eye_btn" id="eye"  onclick="if (input_password.type == 'text') input_password.type = 'password';
+                        else input_password.type = 'text';">
+                            <i class="ti-eye"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="btns">
+                        <div class="login_btn">
+                            <a href="./account_2.html">Log In</a>
+                        </div>
+
+                        <label class="remember_btn">
+                            <input type="checkbox" name="" id="remember">
+                            <span>Remember me</span>
+                        </label>
+                        
+                    </div>
+                    <p class="loss_pass">
+                        Loss your password?
+                    </p>
+                </div>
+            </div>
+
+
+            <div id="register_form" class="login">
+                <!-- <p class="form_title">Login</p> -->
+                <div class="register_container">
+                    <p class="form_title">Register</p>
+
+                    <div class="first-row_info">
+                        <div class="username_info">
+                            <div class="register_title">
+                                <p class="register_info">Username</p>
+                                <span class="required">*</span> 
+                            </div>
+                            <input type="text" name="" id="input_username" class="register_input">
+                        </div>
+                        
+                        <div class="date_info">
+                            <div class="register_title">
+                                <p class="register_info">Birth Day</p>
+                                <span class="required">*</span>
+                            </div>
+                            <input type="date" name="" id="input_date" class="register_input" style="font-family: 'Times New Roman', Times, serif;">
+                        </div>
+                    </div>
+                    
+                    <div class="second-row_info">
+                        <div class="phone_info">
+                            <div class="register_title">
+                                <p class="register_info">Phone Number</p>
+                                <span class="required">*</span> 
+                            </div>
+                            <input type="tel" name="" id="input_phone" class="register_input">
+                        </div>
+
+                        <div class="email_info">
+                            <div class="register_title">
+                                <p class="register_info">Email Address</p>
+                                <span class="required">*</span> 
+                            </div>
+                            <input type="email" name="" id="input_email" class="register_input">
+                        </div>
+                    </div>
+
+                    <div class="address_info">
+                        <div class="register_title">
+                            <p class="register_info">Address</p>
+                             <span class="required">*</span> 
+                        </div>
+                        <input type="text" name="" id="input_address" class="register_input">
+                    </div>
+
+                    <div class="pass_info">
+                        <div class="register_title">
+                            <p class="register_info">Password</p>
+                            <span class="required">*</span> 
+                        </div>
+    
+                        <div class="pass_input">
+                            <input type="password" id="register_password" class="register_input">
+                            <div class="eye_btn" id="eye"  onclick="if (register_password.type == 'text') register_password.type = 'password';
+                            else register_password.type = 'text';">
+                                <i class="ti-eye"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="register_title">
+                            <p class="register_info">Confirm Password</p>
+                            <span class="required">*</span> 
+                        </div>
+    
+                        <div class="pass_input">
+                            <input type="password" id="confirm_password" class="register_input">
+                            <div class="eye_btn" id="eye"  onclick="if (confirm_password.type == 'text') confirm_password.type = 'password';
+                            else confirm_password.type = 'text';">
+                                <i class="ti-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="btns">
+                        <div class="register_btn">
+                            <p>Register</p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="social">
+                <div class="social_left">
+                    <h2 class="social_header">We Are Synonymous With Quality</h2>
+                    <h1 class="social_info">The Best Wine Made With <br> Carefully Selected Pinot Noir <br> Grapes</h1>
+                </div>
+
+                <div class="social_right">
+                    <a href="" class="ti-facebook social_icon"></a>
+                    <a href="" class="ti-twitter-alt social_icon"></a>
+                    <a href="" class="ti-youtube social_icon"></a>
+                    <a href="" class="ti-linkedin social_icon"></a>
+                    <a href="" class="ti-instagram social_icon"></a>
+                </div>
+        </div>
+
+        <div id="copy-right">
+            <p class="left_item">&copy;2023 &minus; By ThienMy & ThanhDanh</p>
+            <div class="right_item">
+                <a href="" class="more_info">Terms & Conditions</a>
+                <a href="" class="more_info">Refunds</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="loss-pass_modal"  class="modal">
+        <div class="modal_container">
+            <div class="close_btn">
+                <i class="ti-close"></i>
+            </div>
+            <div class="send-email_form">
+                <h1 class="modal_title">Forget Password</h1>
+                <p class="modal_info">Email address</p>
+                <input type="email" id="forget-pass_email" class="modal_input">
+                <p class="modal_info">We'll send OTP number to your email</p>
+                <div class="btns">
+                    <div class="send_btn">
+                        <p>Send</p>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="otp_form">
+                <h1 class="modal_title">Please input your OTP number</h1>
+
+                <div id="input_otp" class="input_number">
+                    <input class="input" type="text" 
+                        inputmode="numeric" maxlength="1" />
+                    <input class="input" type="text" 
+                        inputmode="numeric" maxlength="1" />
+                    <input class="input" type="text" 
+                        inputmode="numeric" maxlength="1" />
+                    <input class="input" type="text" 
+                        inputmode="numeric" maxlength="1" />
+                </div>
+                
+                <p class="resend">Resend</p>
+
+                <div class="btns">
+                    <div class="submit_btn">
+                        <p>Submit</p>
+                    </div>
+                </div>  
+            </div>
+
+
+            <div class="change_form">
+                <h1 class="modal_title">Change your password</h1>
+
+                <div class="change_title">
+                    <p class="change_info">New Password</p>
+                    <span class="required">*</span> 
+                </div>
+
+                <div class="pass_input">
+                    <input type="password" id="change_password" class="change_input">
+                    <div class="eye_btn" id="eye"  onclick="if (change_password.type == 'text') change_password.type = 'password';
+                    else change_password.type = 'text';">
+                        <i class="ti-eye"></i>
+                    </div>
+                </div>
+                
+                <div class="change_title">
+                    <p class="change_info">Confirm Password</p>
+                    <span class="required">*</span> 
+                </div>
+
+                <div class="pass_input">
+                    <input type="password" id="confirm_change_password" class="change_input">
+                    <div class="eye_btn" id="eye"  onclick="if (confirm_change_password.type == 'text') confirm_change_password.type = 'password';
+                    else confirm_change_password.type = 'text';">
+                        <i class="ti-eye"></i>
+                    </div>
+                </div>
+
+                <div class="btns">
+                    <div class="change_btn">
+                        <p>Change</p>
+                    </div>
+                </div>  
+            </div>
+            
+        </div>
+       
+    </div>
+
+    <div id="check-email_modal" class="modal">
+        <div class="modal_container">
+            <div class="close_btn">
+                <i class="ti-close"></i>
+            </div>
+            <h1 class="modal_title">Verify Your Email</h1>
+            <h3 class="modal_title">Please input OTP number that was send to your email</h3>
+            <div class="otp_form">
+                <div id="input_otp" class="input_number">
+                    <input class="input" type="text" 
+                        inputmode="numeric" maxlength="1" />
+                    <input class="input" type="text" 
+                        inputmode="numeric" maxlength="1" />
+                    <input class="input" type="text" 
+                        inputmode="numeric" maxlength="1" />
+                    <input class="input" type="text" 
+                        inputmode="numeric" maxlength="1" />
+                </div>
+                
+                <p class="resend">Resend</p>
+    
+                <div class="btns">
+                    <div class="submit_btn">
+                        <p>Submit</p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Chuyển form login - register
+        var login_form = document.getElementById('login_form');
+        var register_form = document.getElementById('register_form');
+        var btn = document.getElementById('btn');
+        var btn_left = document.getElementById('btn_left');
+        var btn_right = document.getElementById('btn_right');
+        var form_cont = document.getElementById('form_container');
+
+        function register(){
+            login_form.style.right = '100%';
+            register_form.style.left = '130px';
+
+            btn.style.left = '50%';
+            btn_left.style.color = '#000';
+            btn_right.style.color = '#fff';
+            
+            // form_cont.style.height = '950px';
+            form_cont.style.height = '1050px';
+
+        }
+
+        function login(){
+            login_form.style.right = '130px';
+            register_form.style.left = '100%';
+            btn.style.left = '0';
+            btn_left.style.color = '#fff';
+            btn_right.style.color = '#000';
+            form_cont.style.height = '800px';
+        }
+
+
+        // Mở modal 
+        var openLossBtn = document.querySelector('.loss_pass');
+        var closeLossBtn = document.querySelector('#loss-pass_modal .close_btn');
+        var openCheckBtn = document.querySelector('.register_btn');
+        var closeCheckBtn = document.querySelector('#check-email_modal .close_btn');
+
+
+
+        var modal = document.querySelector('.modal');
+        var lossPass_modal = document.getElementById('loss-pass_modal');
+        var checkMail_modal = document.getElementById('check-email_modal');
+
+
+        var inputOTP = document.querySelectorAll('.input');
+        var inputChange = document.querySelectorAll('.change_input');
+
+        function showLossModal(){
+            lossPass_modal.classList.add('open');
+            console.log(lossPass_modal);
+
+        }
+
+        function closeLossModal(){
+            lossPass_modal.classList.remove('open');
+
+            sendForm.style.right = '0';
+            otpForm.style.left = '100%';
+            otpForm.style.top = '0'
+            changeForm.style.left = '100%';
+            modalContainer.style.height = '300px';
+
+            inputOTP.forEach(function(item){
+                item.value = '';
+                return;
+            })
+
+            inputChange.forEach(function(item){
+                item.value = '';
+                return;
+            })
+        }
+
+        function showCheckModal(){
+            checkMail_modal.classList.add('open');
+        }
+
+        function closeCheckModal(){
+            checkMail_modal.classList.remove('open');
+
+            inputOTP.forEach(function(item){
+                item.value = '';
+                return;
+            })
+
+            inputChange.forEach(function(item){
+                item.value = '';
+                return;
+            })
+        }
+
+        openLossBtn.addEventListener('click', showLossModal);
+        closeLossBtn.addEventListener('click', closeLossModal);
+        openCheckBtn.addEventListener('click', showCheckModal);
+        closeCheckBtn.addEventListener('click', closeCheckModal);
+
+
+        // OTP 
+        // const inputs = document.getElementById("input_otp");
+        var inputs = document.querySelectorAll('.input_number');
+        inputs.forEach(function(item){
+            item.addEventListener("input", function (e) {
+            const target = e.target;
+            const val = target.value;
+        
+            if (isNaN(val)) {
+                target.value = "";
+                return;
+            }
+        
+            if (val != "") {
+                const next = target.nextElementSibling;
+                if (next) {
+                    next.focus();
+                }
+            }
+        });
+        
+        item.addEventListener("keyup", function (e) {
+            const target = e.target;
+            const key = e.key.toLowerCase();
+        
+            if (key == "backspace" || key == "delete") {
+                target.value = "";
+                const prev = target.previousElementSibling;
+                if (prev) {
+                    prev.focus();
+                }
+                return;
+            }
+        });
+        })
+        
+
+        // Chuyển form send email và otp
+        var sendForm = document.querySelector('.send-email_form');
+        var otpForm = document.querySelector('.otp_form');
+        var sendBtn = document.querySelector('.send_btn');
+
+        function otp(){
+            sendForm.style.right = '100%';
+            otpForm.style.left = '0';
+        }
+
+        sendBtn.addEventListener('click', otp);
+
+
+        // Chuyển form otp và change
+        var changeForm = document.querySelector('.change_form');
+        var submitBtn = document.querySelector('.submit_btn');
+        var modalContainer = document.querySelector('.modal_container');
+
+        function change(){
+            modalContainer.style.height = '400px';
+            otpForm.style.top = '100%';
+            changeForm.style.left = '0';
+        }
+
+        submitBtn.addEventListener('click', change);
+
+    </script>
+
+</body>
+
+</html>

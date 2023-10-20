@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Phần header */
+#header{
+    width: 100%;
+    height: 100px;
+    background-color: var(--white_color);
+
+/* Các phần tử bên trong header */
+    .nav_bar{
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 100px;
+        gap: 0.5rem;
+    }
+
+    .sign{
+        width: 150px;
+        height: 60px;
+        background: url('./img/sign_demo.png') center center / cover no-repeat;
+    }
+
+    .nav_right{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+
+        .nav_item{
+            position: relative;
+            display: inline-block;
+            width: 120px;
+            height: 50px;
+        }
+
+        .nav_item a{
+            /* position: absolute; */
+            color: var(--wine_color);
+            display: inline-block;
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+            line-height: 50px;
+            transition-duration: 0.3s;
+            
+            /* border-bottom: solid 2px var(--white_color); */
+
+        }
+
+        .nav_item>a{
+            border-bottom: solid 2px var(--white_color);
+        }
+
+        .nav_item:hover>a{
+            color: var(--white_color);
+            background-color: var(--wine_color);
+
+            /* border-bottom: solid 2px var(--wine_color); */
+        }
+
+        .nav_list, .nav_btns{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            gap: 0.5rem;    
+            /* gap để chỉnh khoảng cách giữa các nút */
+        }
+
+        .nav-arrow-down{
+            font-size: 14px;
+        }
+
+        .subnav{
+            position: absolute;
+            top: 100%;
+            left: 0; 
+            z-index: 1;
+            width: 120%;
+            background-color: var(--white_color);
+            box-shadow: 0 0 2px var(--gray_color);
+
+
+            list-style: none;
+            opacity: 0;
+            visibility: hidden;
+
+            .subnav_item a{
+                background-color: var(--white_color);
+                color: var(--wine_color);
+            }   
+
+            .subnav_item:hover>a{
+                color: var(--white_color);
+                background-color: var(--gold_color);
+            }
+        }
+
+        .nav_shop:hover .subnav{
+            opacity: 1;
+            visibility:visible;
+        }
+
+        .wine_btn{
+            position: relative;
+            width: 170px;
+            height: 60px;
+            border: solid 2px var(--gray_color);
+            font-size: 20px;
+            cursor: pointer;
+            transition-duration: 0.3s;
+
+        }
+
+        .wine_btn a{
+            position: absolute;
+            text-decoration: none;
+            text-align: center;
+            color: var(--gold_color);
+            width: 100%;
+            line-height: 60px;
+        }
+        
+        .wine_btn:hover{
+            transform: scale(1.1);
+        }
+
+        .cart_btn{
+            color: var(--gold_color);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 15px 20px;        
+        }
+
+        .cart_btn i{
+            /* đảo ngược cái icon xe hàng */
+            transform: rotateY(180deg);
+        }
+
+        .cart_quantity{
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            background-color: var(--black_color);
+            color: var(--white_color);
+            text-align: center;
+            font-size: 10px;
+            line-height: 12px;
+            margin: -7px 0px 0px -8px;
+            border-radius: 50%;
+           
+        }
+        
+        /* cho 3 cái dưới lên cùng 1 hàng */
+        .cart_btn p, .cart_btn i, .cart_quantity{
+            display: inline-block;
+        }
+        
+    }
+    
+}
+
+#content{
+    #title{
+        width: 100%;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to bottom, rgba(116, 0, 69, 0.8), rgba(255, 255, 255, 0.7))
+        ,url('./img/canhdong.jpg') center center / cover no-repeat ;
+
+        .title_content{
+            text-align: center;
+            color: var(--white_color);
+
+            .title_header{
+                font-size: 72px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            .title_info{
+                font-size: 20px;
+            }
+        }
+    }
+
+    #leave_message{
+        width: 100%;
+        padding: 70px 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+        background: url('./img/contact_bg.jpg') center center / cover no-repeat;
+
+        .lm_title{
+            color: var(--teal_color);
+            font-size: 54px;
+            font-weight: 500;
+            margin-bottom: 50px;
+        }
+
+        .input_container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+
+            .input{
+                width: 780px;
+                min-height: 60px;
+                font-size: 17px;
+                padding: 15px;
+                background-color: var(--skin_color);
+                border: none;
+            }
+
+            #input_message{
+                resize: vertical;
+                min-height: 60px;
+                width: 100%;
+
+                height: 130px;
+            }
+
+            .send_btn{
+                position: relative;
+                width: 180px;
+                height: 60px;
+                background-color:  var(--wine_color);
+                transition-duration: 0.3s;
+            }
+
+            .send_btn a{
+                position: absolute;
+                color: var(--white_color);
+                text-decoration: none;
+                font-size: 20px;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 60px;
+            }
+            
+            .send_btn:hover{
+                transform: scale(1.1);
+                background-color: var(--gold_color);
+            }
+        }
+    }
+
+    #contact{
+        padding: 70px 130px;
+        width: 100%;
+        height: 320px;
+        background-color: var(--lightgray_color)   ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .contact_container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            width: 100%;
+            height: 100%;
+
+            .contact_info{
+                background-color: var(--white_color);
+                width: 380px;
+                height: 100%;
+                transition-duration: .3s;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+
+                .info_title{
+                    color: var(--wine_color);
+                    font-weight: 500;
+                }
+
+                .info{
+                    font-size: 20px;
+                    color: var(--teal_color);
+                }
+            }
+
+            /* .contact_info:hover{
+                margin-bottom: 50px;
+            } */
+        }
+    }
+}
+
+/* Phần footer, bao gồm Social và Copyright */
+#footer{
+    /* position: relative; */
+    width: 100%;
+    height: 450px;
+
+    #social{
+        /* position: absolute; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 350px;
+        padding: 0 130px;
+        background:linear-gradient(to bottom,rgba(116, 0, 69, 0.8), rgba(116, 0, 69, 0.8))
+        , url('./img/footer.jpg') center center / cover no-repeat;
+
+        .social_left{
+            color: var(--white_color);
+
+            .social_header{
+                font-size: 24px;
+                margin-bottom: 20px;
+                font-weight: 200;
+            }
+            
+            .social_info{
+                font-size: 40px;
+                font-weight: 500;
+            }
+        }
+
+        .social_right{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            .social_icon{
+                font-size: 20px;
+                background-color: var(--white_color);
+                color: var(--wine_color);
+                padding: 10px;
+                border-radius: 50%;
+                text-decoration: none;
+                transition-duration: 0.3s;
+            }
+
+            .social_icon:hover{
+                transform: scale(1.1);
+                color: var(--gold_color) ;
+            }
+        }
+        
+    }
+
+    #copy-right{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--white_color);
+        font-size: 18px;
+        width: 100%;
+        height: 100px;
+        padding: 0 130px;   
+
+        .left_item{
+            color: var(--teal_color);
+        }
+
+        .right_item{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            
+            .more_info{
+                text-decoration: none;
+                color: var(--teal_color)    ;
+            }
+        }
+    }
+
+}

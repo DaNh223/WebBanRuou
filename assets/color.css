@@ -1,0 +1,25 @@
+:root{
+    --redwine_color:#c11522ff;
+    --wine_color: #740045;
+    --purple_color:  #a73b7c; 
+    --white_color: #fff;
+    --gray_color: #ccc;
+    --green_color: #0bbe3b;
+    --red_color: red;
+    --lightgray_color:#fbf9f5ff;
+    --bgAccount_color: #edeef3;
+    --black_color: #000;
+    --blue_color:#26B4FF;
+    --violet_color: #6e66ed;
+    --darkblue_color: #0c71a8;
+    --gold_color:#b0976d;
+    --teal_color: #2d5569;
+    --skin_color:#fdf0d5ff;
+    --eliminate_color:#02010100;
+
+    --delivered_color: #048125;
+    --transport_color: #007cd4;
+    --pending_color: #ff6877;
+    --cancel_color: #353349;
+
+}

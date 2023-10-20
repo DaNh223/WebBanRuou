@@ -1,0 +1,711 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+@keyframes upPercent {
+    from{
+        width: 0;
+    }
+    to{
+        width: var(--i);
+    }
+    
+}
+
+
+
+/* Phần header */
+#header{
+    width: 100%;
+    height: 100px;
+    background-color: var(--white_color);
+
+/* Các phần tử bên trong header */
+    .nav_bar{
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 100px;
+        gap: 0.5rem;
+    }
+
+    .sign{
+        width: 150px;
+        height: 60px;
+        background: url('./img/sign_demo.png') center center / cover no-repeat;
+    }
+
+    .nav_right{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+
+        .nav_item{
+            position: relative;
+            display: inline-block;
+            width: 120px;
+            height: 50px;
+        }
+
+        .nav_item a{
+            /* position: absolute; */
+            color: var(--wine_color);
+            display: inline-block;
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+            line-height: 50px;
+            transition-duration: 0.3s;
+            
+            /* border-bottom: solid 2px var(--white_color); */
+
+        }
+
+        .nav_item>a{
+            border-bottom: solid 2px var(--white_color);
+        }
+
+        .nav_item:hover>a{
+            color: var(--white_color);
+            background-color: var(--wine_color);
+
+            /* border-bottom: solid 2px var(--wine_color); */
+        }
+
+        .nav_list, .nav_btns{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            gap: 0.5rem;    
+            /* gap để chỉnh khoảng cách giữa các nút */
+        }
+
+        .nav-arrow-down{
+            font-size: 14px;
+        }
+
+        .subnav{
+            position: absolute;
+            top: 100%;
+            left: 0; 
+            z-index: 1;
+            width: 120%;
+            background-color: var(--white_color);
+            box-shadow: 0 0 2px var(--gray_color);
+
+
+            list-style: none;
+            opacity: 0;
+            visibility: hidden;
+
+            .subnav_item a{
+                background-color: var(--white_color);
+                color: var(--wine_color);
+            }   
+
+            .subnav_item:hover>a{
+                color: var(--white_color);
+                background-color: var(--gold_color);
+            }
+        }
+
+        .nav_shop:hover .subnav{
+            opacity: 1;
+            visibility:visible;
+        }
+
+        .wine_btn{
+            position: relative;
+            width: 170px;
+            height: 60px;
+            border: solid 2px var(--gray_color);
+            font-size: 20px;
+            cursor: pointer;
+            transition-duration: 0.3s;
+
+        }
+
+        .wine_btn a{
+            position: absolute;
+            text-decoration: none;
+            text-align: center;
+            color: var(--gold_color);
+            width: 100%;
+            line-height: 60px;
+        }
+        
+        .wine_btn:hover{
+            transform: scale(1.1);
+        }
+
+        .cart_btn{
+            color: var(--gold_color);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 15px 20px;        
+        }
+
+        .cart_btn i{
+            /* đảo ngược cái icon xe hàng */
+            transform: rotateY(180deg);
+        }
+
+        .cart_quantity{
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            background-color: var(--black_color);
+            color: var(--white_color);
+            text-align: center;
+            font-size: 10px;
+            line-height: 12px;
+            margin: -7px 0px 0px -8px;
+            border-radius: 50%;
+           
+        }
+        
+        /* cho 3 cái dưới lên cùng 1 hàng */
+        .cart_btn p, .cart_btn i, .cart_quantity{
+            display: inline-block;
+        }
+        
+    }
+    
+}
+
+#content{
+    #about{
+        width: 100%;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to bottom, rgba(116, 0, 69, 0.8), rgba(255, 255, 255, 0.7))
+        ,url('./img/canhdong.jpg') center center / cover no-repeat ;
+
+        .about_content{
+            text-align: center;
+            color: var(--white_color);
+
+            .about_header{
+                font-size: 72px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            .about_info{
+                font-size: 20px;
+            }
+        }
+    }
+
+    #flavor{
+        width: 100%;
+        height: 630px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .flavor_content{
+            width: calc(100% - 200px);
+            height: calc(100% - 140px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .flavor_left{
+                width: 50%;
+                height: 100%;
+                padding: 0 30px;
+
+                .flavor_header{
+                    font-size: 24px;
+                    color: var(--wine_color);
+                    margin-bottom: 40px;
+                }
+
+                .flavor_slogan{
+                    font-size: 54px;
+                    font-weight: 500;
+                    color: var(--teal_color);
+                    margin-bottom: 10px;
+                }
+
+                .flavor_info{
+                    font-size: 20px;
+                    color: var(--teal_color);
+                    line-height: 35px;
+                }
+            }
+
+            .flavor_right{
+                width: 50%;
+                height: 100%;
+                padding: 0 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .flavor_list{
+                    width: 100%;
+                    height: calc(100% - 200px);
+                    /* background-color: var(--gold_color); */
+
+                    .flavor_item{
+                        margin-bottom: 50px ;
+
+                        .flavor_name{
+                            font-size: 20px;
+                            line-height: 35px;
+                            color: var(--teal_color);
+                        }
+    
+                        .quality_bar{
+                            width: 100%;
+                            height: 5px;
+                            background-color: var(--skin_color);
+                            border: none;
+                            border-radius: 3px;
+
+                            .quality_percent{
+                            border-radius: 3px;
+                                /* background-color: var(--redwine_color); */
+                                background-color: var(--purple_color);
+                                animation: upPercent ease 2s;
+                            }
+                        }
+                    }
+
+                    .flavor_1{
+                        .quality_percent{
+                            width: var(--i);
+                            height: 100%;
+                            
+                        }
+                    }
+                    .flavor_2{
+                        .quality_percent{
+                            width: var(--i);
+                            height: 100%;
+                        }
+                    }
+                    .flavor_3{
+                        .quality_percent{
+                            width: var(--i);
+                            height: 100%;
+                        }
+                    }
+                    .flavor_4{
+                        .quality_percent{
+                            width: var(--i);
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #slider{
+        width: 100%;
+        height: 380px;
+        background: url('./img/cheers_img2.jpg') center center / cover no-repeat;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .slider_container{
+         
+            .slide{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                color: var(--white_color);
+
+                .person{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 20px;
+
+                    .person_img{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        /* background: url('./img/canhdong.jpg') center center / cover no-repeat; */
+                    }
+
+                    .person_name, .person_duty{
+                        font-size: 17px;
+                        text-align: center;
+                    }
+                }
+
+                .person_slogan{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    width: calc(100% - 510px);
+                    height: 100px;
+                    background-color: var(--white_color);
+                    color: var(--teal_color);
+                    text-align: center;
+                    font-size: 25px;
+                    font-style: italic;
+                    margin-top: 40px;
+
+                }
+
+            }
+
+            #slide1{
+                .person_img{
+                    background: url('./img/user_img.png') center center / cover no-repeat;
+                }
+            }
+
+            #slide2{
+                .person_img{
+                    background: url('./img/thienmy_img.jpg') center center / cover no-repeat;
+                }
+            }
+        }
+
+    }   
+
+    #dedicate{
+        width: 100%;
+        height: 920px;
+        background-color: var(--white_color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .dedicate_content{
+            width: calc(100% - 260px);
+            height: calc(100% - 140px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* background-color: var(--gold_color); */
+
+            .dedicate_left{
+                width: 50%;
+                height: 100%;
+                padding: 0 70px 0 0;
+
+                .dedicate_header{
+                    font-size: 24px;
+                    color: var(--wine_color);
+                    margin-bottom: 40px;
+                }
+
+                .dedicate_slogan{
+                    font-size: 54px;
+                    font-weight: 500;
+                    color: var(--teal_color);
+                    margin-bottom: 10px;
+                }
+
+                .dedicate_info{
+                    font-size: 20px;
+                    color: var(--teal_color);
+                    line-height: 35px;
+                    margin-bottom: 30px;
+
+                }
+
+                .more_btn{
+                    position: relative;
+                    width: 170px;
+                    height: 60px;
+                    background-color:  var(--wine_color);
+                    transition-duration: 0.3s;
+                }
+
+                .more_btn a{
+                    position: absolute;
+                    color: var(--white_color);
+                    text-decoration: none;
+                    font-size: 20px;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    line-height: 60px;
+                }
+                
+                .more_btn:hover{
+                    transform: scale(1.1);
+                    background-color: var(--gold_color);
+                }
+            }
+
+            .dedicate_right{
+                width: 50%;
+                height: 100%;
+                padding: 0 0 0 70px;
+                background: url('./img/dedicate_glass.jpg') center center / cover no-repeat;
+            }
+        }
+    }
+
+    #discover{
+        width: 100%;
+        height: 310px;
+        display: flex;
+        align-items: center;
+        justify-content: center;   
+        background:linear-gradient(to bottom, rgba(253, 240, 213, 0.8), rgba(251, 249, 241, 1));
+
+        .discover_content{
+            width: calc(100% - 260px);
+            height: calc(100% - 140px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+
+            background: linear-gradient(to bottom, rgba(116, 0, 69, 0.8), rgba(116, 0, 69, 0.8))
+
+            , url('./img/footer.jpg') center center / cover no-repeat;
+
+            .discover_header{
+                font-size: 40px;
+                font-weight: 500;
+                color: var(--white_color);
+            }
+
+            .shop_btn{
+                position: relative;
+                width: 140px;
+                height: 70px;
+                border: 2px solid var(--white_color);
+                background-color:  var(--eliminate_color);
+                transition-duration: 0.3s;
+            }
+
+            .shop_btn a{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                line-height: 70px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 20px;
+                color: var(--white_color);
+            }
+
+            .shop_btn:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    #quality{
+        width: 100%;
+        height: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .quality_container{
+            width: calc(100% - 260px);
+            height: calc(100% - 140px);
+            /* background-color: var(--gold_color); */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .quality_left{
+                width: 50%;
+                height: 100%;
+                padding: 60px;
+                display: grid;
+                grid-template-columns: 220px 220px;
+                grid-template-rows: auto auto;
+                column-gap: 80px;
+                row-gap: 40px;
+
+                .quality_item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    text-align: center;
+
+                    .item_icon{
+                        width: 70px;
+                        height: 70px;
+                    }
+
+                    .item_name{
+                        font-size: 26px;
+                        font-weight: 500;
+                        margin: 20px 0 15px 0;
+                        color: var(--teal_color);
+                    }
+
+                    .item_info{
+                        font-size: 17px;
+                        line-height: 35px;
+                        color: var(--teal_color);
+                    }
+
+                    .icon1{
+                        background: url('./fonts/grape_icon.svg') center center / cover no-repeat;
+                    }
+                    .icon2{
+                        background: url('./fonts/bottle_icon.svg') center center / cover no-repeat;
+                    }
+                    .icon3{
+                        background: url('./fonts/can_icon.svg') center center / cover no-repeat;
+                    }
+                    .icon4{
+                        background: url('./fonts/glass_icon.svg') center center / cover no-repeat;
+                    }
+                }
+            }
+
+            .quality_right{
+                width: 50%;
+                height: 100%;
+                padding: 60px;
+                background-color: var(--skin_color);
+
+                .quality_header{
+                    font-size: 54px;
+                    font-weight: 500;
+                    color: var(--teal_color);
+                    margin-bottom: 10px;
+                }
+
+                .quality_info{
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: var(--teal_color);
+                    margin-bottom: 40px;
+                }
+
+                .more_btn{
+                    position: relative;
+                    width: 170px;
+                    height: 60px;
+                    background-color:  var(--wine_color);
+                    transition-duration: 0.3s;
+                }
+
+                .more_btn a{
+                    position: absolute;
+                    color: var(--white_color);
+                    text-decoration: none;
+                    font-size: 20px;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    line-height: 60px;
+                }
+                
+                .more_btn:hover{
+                    transform: scale(1.1);
+                    background-color: var(--gold_color);
+                }
+
+            }
+        }
+    }
+}
+
+ /* Phần footer, bao gồm Social và Copyright */
+ #footer{
+    /* position: relative; */
+    width: 100%;
+    height: 450px;
+
+    #social{
+        /* position: absolute; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 350px;
+        padding: 0 130px;
+        background:linear-gradient(to bottom,rgba(116, 0, 69, 0.8), rgba(116, 0, 69, 0.8))
+        , url('./img/footer.jpg') center center / cover no-repeat;
+
+        .social_left{
+            color: var(--white_color);
+
+            .social_header{
+                font-size: 24px;
+                margin-bottom: 20px;
+                font-weight: 200;
+            }
+            
+            .social_info{
+                font-size: 40px;
+                font-weight: 500;
+            }
+        }
+
+        .social_right{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            .social_icon{
+                font-size: 20px;
+                background-color: var(--white_color);
+                color: var(--wine_color);
+                padding: 10px;
+                border-radius: 50%;
+                text-decoration: none;
+                transition-duration: 0.3s;
+            }
+
+            .social_icon:hover{
+                transform: scale(1.1);
+                color: var(--gold_color) ;
+            }
+        }
+        
+    }
+
+    #copy-right{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--white_color);
+        font-size: 18px;
+        width: 100%;
+        height: 100px;
+        padding: 0 130px;   
+
+        .left_item{
+            color: var(--teal_color);
+        }
+
+        .right_item{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            
+            .more_info{
+                text-decoration: none;
+                color: var(--teal_color)    ;
+            }
+        }
+    }
+
+}

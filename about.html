@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/about_style.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/color.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- header -->
+    <div id="header">
+        <div class="nav_bar">
+            <a href="./index.html" class="sign">
+            </a>
+            <div class="nav_right">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="./index.html">Homepages</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="./about.html">About Us</a>
+                    </li>
+
+                    <li class="nav_item nav_shop">
+                        <a href="#">Shop</a>
+
+                        <ul class="subnav">
+                            <li class="subnav_item"><a href="./shop.html">Shop Page</a></li>
+                            <li class="subnav_item"><a href="./checkout.html">Check Out</a></li>
+                            <li class="subnav_item"><a href="./account.html">My Account</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="./blog.html">Blog</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="./contact.html">Contact</a>
+                    </li>
+                </ul>   
+
+                <div class="nav_btns">
+                    <div class="wine_btn">
+                        <a href="404.html">Wine From $40</a>
+                    </div>
+
+                   <a href="./cart.html" style="text-decoration: none;">
+                        <d class="cart_btn">
+                            <p class="money">$0.00</p>
+                            <i class="ti-shopping-cart"></i>
+                            <div class="cart_quantity">
+                                <p>0</p>
+                            </div>
+                        </d>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end header -->
+
+    <!-- Content -->
+    <div id="content">
+        <div id="about">
+            <div class="about_content">
+                <h1 class="about_header">About Us</h1>
+                <p class="about_info">Our Wine Reflects Our Passion, Quality, & Rich History Of The Land.</p>
+            </div>
+        </div>
+
+        <div id="flavor">
+            <div class="flavor_content">
+                <div class="flavor_left">
+                    <p class="flavor_header">Delicious Flavor</p>
+                    <h1 class="flavor_slogan">More Than Wine</h1>
+                    <p class="flavor_info">Our grapes are grown with great care by highly qualified professionals. The
+                        process is lengthy and completed with great attention to detail. Our growing region benefits
+                        from several important factors that contribute to the natural sweetness of our grapes.</p>
+                    <br>
+                    <p class="flavor_info">Despite all of this care, transportation is done in oak barrels to ensure the
+                        quality of the product throughout the process. This requires patience, dedication, and years of
+                        hard work. We have been a reference in the wine industry for many years. We are certain that you
+                        will love our wines, so please use them sparingly.</p>
+                </div>
+                <div class="flavor_right">
+                    <div class="flavor_list">
+                        <div class="flavor_item flavor_1">
+                            <p class="flavor_name">Type Of Grapes</p>
+                            <div class="quality_bar">
+                                <div class="quality_percent" style="--i: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="flavor_item flavor_2">
+                            <p class="flavor_name">Satisfaction Level</p>
+                            <div class="quality_bar">
+                                <div class="quality_percent" style="--i: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="flavor_item flavor_3">
+                            <p class="flavor_name">Return</p>
+                            <div class="quality_bar">
+                                <div class="quality_percent" style="--i: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="flavor_item flavor_4">
+                            <p class="flavor_name">Climate</p>
+                            <div class="quality_bar">
+                                <div class="quality_percent" style="--i: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="slider" class="swiper mySwiper">
+            <div class="slider_container swiper-wrapper">
+                <div id="slide1" class="slide swiper-slide" >
+                    <div class="person">
+                        <div class="person_img"></div>
+                        <div class="person_info">
+                            <h3 class="person_name">Thành Danh</h3>
+                            <p class="person_duty">CEO</p>
+                        </div>
+                    </div>
+                    <div class="person_slogan">
+                        <p>Thử 1 lần đi không nghiện đâu</p>
+                    </div>
+                </div>
+                <div id="slide2" class="slide swiper-slide" >
+                    <div class="person">
+                        <div class="person_img"></div>
+                        <div class="person_info">
+                            <h3 class="person_name">Thiện Mỹ</h3>
+                            <p class="person_duty">CEO</p>
+                        </div>
+                    </div>
+                    <div class="person_slogan">
+                        <p>Mua rượu đi bạn ơi</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Nút chuyển -->
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div> -->
+        </div>
+
+        <div id="dedicate">
+            <div class="dedicate_content">
+                <div class="dedicate_left">
+                    <p class="dedicate_header">Dedication Delivers</p>
+                    <h1 class="dedicate_slogan">Quality & <br> Sophistication In Years Of Dedication </h1>
+                    <p class="dedicate_info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Molestie a iaculis at erat pellentesque
+                        adipiscing commodo. Dolor sit amet consectetur adipiscing. Mauris a diam maecenas sed enim ut.
+                        Euismod nisi porta lorem mollis aliquam ut porttitor. Sit amet justo donec enim diam vulputate.
+                    </p>
+                    <p class="dedicate_info">Sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Nullam
+                        eget felis eget nunc lobortis mattis. Semper feugiat nibh sed pulvinar proin. Interdum varius
+                        sit amet mattis. Gravida quis blandit turpis cursus in hac habitasse. Rhoncus aenean vel elit
+                        scelerisque mauris pellentesque pulvinar pellentesque habitant.</p>
+                    <div class="more_btn">
+                        <a href="">Discover More</a>
+                    </div>
+                </div>
+                <div class="dedicate_right"></div>
+            </div>
+        </div>
+
+        <div id="discover">
+            <div class="discover_content">
+                <h1 class="discover_header">Discover Our Wines</h1>
+                <div class="shop_btn">
+                    <a href="">See Shop</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="quality">
+            <div class="quality_container">
+                <div class="quality_left">
+                    <div class="quality_item">
+                        <div class="item_icon icon1"></div>
+                        <h3 class="item_name">Grapes</h3>
+                        <p class="item_info">Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    </div>
+                    <div class="quality_item">
+                        <div class="item_icon icon2"></div>
+                        <h3 class="item_name">Freshness</h3>
+                        <p class="item_info">Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    </div>
+                    <div class="quality_item">
+                        <div class="item_icon icon3"></div>
+                        <h3 class="item_name">Special</h3>
+                        <p class="item_info">Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    </div>
+                    <div class="quality_item">
+                        <div class="item_icon icon4"></div>
+                        <h3 class="item_name">Celebration</h3>
+                        <p class="item_info">Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    </div>
+                </div>
+                <div class="quality_right">
+                    <h1 class="quality_header">Quality Assurance For Many Years</h1>
+                    <p class="quality_info">Aute excepteur commodo id ullamco do consectetur adipisicing pariatur proident qui duis laborum velit Lorem pariatur minim exercitation cupidatat. Ex non aute id dolor et ipsum ipsum aliqua consectetur dolor officia do. Id sit sint fugiat enim id labore aut.</p>
+                    <p class="quality_info">Magna nisi quis ullamco est velit reprehenderit sint. Consequat id qui occaecat sunt ullamco fugiat cillum eu fugiat nostrud cillum occaecat Lorem duis ex esse. Eu sint aliqua irure cupidatat veniam commodo tempor fugiat ut ex sit culpa enim.Non ea ullamc.</p>
+                    <div class="more_btn">
+                        <a href="">Discover More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="footer">
+        <div id="social">
+                <div class="social_left">
+                    <h2 class="social_header">We Are Synonymous With Quality</h2>
+                    <h1 class="social_info">The Best Wine Made With <br> Carefully Selected Pinot Noir <br> Grapes</h1>
+                </div>
+
+                <div class="social_right">
+                    <a href="" class="ti-facebook social_icon"></a>
+                    <a href="" class="ti-twitter-alt social_icon"></a>
+                    <a href="" class="ti-youtube social_icon"></a>
+                    <a href="" class="ti-linkedin social_icon"></a>
+                    <a href="" class="ti-instagram social_icon"></a>
+                </div>
+        </div>
+
+        <div id="copy-right">
+            <p class="left_item">&copy;2023 &minus; By ThienMy & ThanhDanh</p>
+            <div class="right_item">
+                <a href="" class="more_info">Terms & Conditions</a>
+                <a href="" class="more_info">Refunds</a>
+            </div>
+        </div>
+</div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            }
+            // ,pagination: {
+            //     el: ".swiper-pagination",
+            //     clickable: true,
+            // },
+            // navigation: {
+            //     nextEl: ".swiper-button-next",
+            //     prevEl: ".swiper-button-prev",
+            // },
+        });
+    </script>
+</body>
+
+</html>

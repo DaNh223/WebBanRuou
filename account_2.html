@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/account-2_style.css">
+    <!-- <link rel="stylesheet" href="./assets/style_demo.css"> -->
+    <link rel="stylesheet" href="./assets/color.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header --> 
+    <div id="header">
+        <div class="nav_bar">
+            <a href="./index.html" class="sign">
+            </a>
+            <div class="nav_right">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="./index.html">Homepages</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="./about.html">About Us</a>
+                    </li>
+
+                    <li class="nav_item nav_shop">
+                        <a href="#">Shop</a>
+
+                        <ul class="subnav">
+                            <li class="subnav_item"><a href="./shop.html">Shop Page</a></li>
+                            <li class="subnav_item"><a href="./checkout.html">Check Out</a></li>
+                            <li class="subnav_item"><a href="./account.html">My Account</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="./blog.html">Blog</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="./contact.html">Contact</a>
+                    </li>
+                </ul>   
+
+                <div class="nav_btns">
+                    <div class="wine_btn">
+                        <a href="404.html">Wine From $40</a>
+                    </div>
+                    <a href="./cart.html" style="text-decoration: none;">
+                        <d class="cart_btn">
+                            <p class="money">$0.00</p>
+                            <i class="ti-shopping-cart"></i>
+                            <div class="cart_quantity">
+                                <p>0</p>
+                            </div>
+                        </d>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End header -->
+
+    <div id="content">
+        <div id="title">
+            <div class="title_content">
+                <h1 class="title_header">My Account</h1>
+                <p class="title_info">Get Winery News, Promotions, & Tastings Exclusively.</p>
+            </div>
+        </div>
+
+        <div id="account_form">
+            <div id="form_container">
+                <div id="menu">
+                    <!-- <div id="active"></div> -->
+                    <div id="user-info" class="menu_item" onclick="Info()"><i class="bi bi-person-circle menu_icon"></i> <p>User Infomation</p></div>
+                    <div id="order-details" class="menu_item" onclick="Order()"><i class="bi bi-card-checklist menu_icon"></i> <p>Order Details</p></div>
+                    <div id="change-password" class="menu_item" onclick="Change()"><i class="bi bi-shield-lock menu_icon"></i> <p>Change Password</p></div>
+                </div>
+    
+                <div id="info_form">
+                    <div class="photo_info">
+                        <img src="./assets/img/user_img.png" alt="" id="user_img">
+                        <input type="file" name="" id="input_img" onchange="chooseImg(this)">
+                        <label class="upload_btn" for="input_img">Upload new photo</label>
+                    </div>
+
+                    <div id="info-row_1" >
+                        <div class="username info">
+                            <p class="info_title">Username</p>
+                            <input class="input" type="text" value="Danh Đẹp Trai" >
+                        </div>
+
+                        <div class="birth info">
+                            <p class="info_title">Date Of Birth</p>
+                            <input class="input" type="date" >
+                        </div>
+                    </div>
+
+                    <div id="info-row_2">
+                        <div class="email info">
+                            <p class="info_title">Email</p>
+                            <input class="input" type="email" value="hetyty123@gmail.com">
+                        </div>
+
+                        <div class="phone info">
+                            <p class="info_title">Phone Number</p>
+                            <input class="input" type="tel" value="0706622303" >
+                        </div>
+                    </div>
+
+                    <div id="info-row_3 ">
+                        <div class="address info">
+                            <p class="info_title">Address</p>
+                            <input class="input" type="text" value="168, Ngã Am, Khóm Tân An, Phường An Hòa, TP.Sa Đéc, Đồng Tháp">
+                        </div>
+                    </div>
+
+                    <div class="save_btn">
+                        <p>Save Change</p>
+                    </div>
+                   
+                </div>
+
+                <div id="order_form" class="disappear">
+                    <table class="order_details">
+                        <tr class="order_title">
+                            <th>Product</th>
+                            <th>Receiver</th>
+                            <th>Address</th>
+                            <th>Order Status</th>
+                            <th>Order Date</th>
+                            <th>Total</th>
+                        </tr>
+
+                        <tr class="order_info">
+                            <td id="product" class="info"><span>Collection Blue Wines</span><i class="bi bi-x"></i><span>1</span></td>
+                            <td id="receiver" class="info"><span>Thiện Mỹ</span></td>
+                            <td id="address" class="info"><span>Cao Lãnh</span></td>
+                            <td id="order_status" class="info">
+                                <div class="status">
+                                    <span class="status_info">In Transport</span>
+                                </div>
+                            </td>
+                            <td id="date" class="info"><span>12/10/2023</span></td>
+                            <td id="total" class="info"><span>$350.00</span></td>
+                        </tr>
+
+                        <tr class="order_info">
+                            <td id="product" class="info"><span>Collection Red Wines</span><i class="bi bi-x"></i><span>1</span></td>
+                            <td id="receiver" class="info"><span>Thiện Mỹ</span></td>
+                            <td id="address" class="info"><span>Cao Lãnh</span></td>
+                            <td id="order_status" class="info">
+                                <div class="status">
+                                    <span class="status_info">In Transport</span>
+                                </div>
+                            </td>
+                            <td id="date" class="info"><span>02/10/2023</span></td>
+                            <td id="total" class="info"><span>$350.00</span></td>
+                        </tr>
+
+                        <tr class="order_info">
+                            <td id="product" class="info"><span>Collection Red Wines</span><i class="bi bi-x"></i><span>1</span></td>
+                            <td id="receiver" class="info"><span>Thiện Mỹ</span></td>
+                            <td id="address" class="info"><span>Cao Lãnh</span></td>
+                            <td id="order_status" class="info">
+                                <div class="status">
+                                    <span class="status_info">In Transport</span>
+                                </div>
+                            </td>
+                            <td id="date" class="info"><span>02/10/2023</span></td>
+                            <td id="total" class="info"><span>$350.00</span></td>
+                        </tr>
+
+                        <tr class="order_info">
+                            <td id="product" class="info"><span>Collection Red Wines</span><i class="bi bi-x"></i><span>1</span></td>
+                            <td id="receiver" class="info"><span>Thiện Mỹ</span></td>
+                            <td id="address" class="info"><span>Cao Lãnh</span></td>
+                            <td id="order_status" class="info">
+                                <div class="status">
+                                    <span class="status_info">In Transport</span>
+                                </div>
+                            </td>
+                            <td id="date" class="info"><span>02/10/2023</span></td>
+                            <td id="total" class="info"><span>$350.00</span></td>
+                        </tr>
+
+                        <tr class="order_info">
+                            <td id="product" class="info"><span>Collection Red Wines</span><i class="bi bi-x"></i><span>1</span></td>
+                            <td id="receiver" class="info"><span>Thiện Mỹ</span></td>
+                            <td id="address" class="info"><span>Cao Lãnh</span></td>
+                            <td id="order_status" class="info">
+                                <div class="status">
+                                    <span class="status_info">In Transport</span>
+                                </div>
+                            </td>
+                            <td id="date" class="info"><span>02/10/2023</span></td>
+                            <td id="total" class="info"><span>$350.00</span></td>
+                        </tr>
+
+                        <tr class="order_info">
+                            <td id="product" class="info"><span>Collection Red Wines</span><i class="bi bi-x"></i><span>1</span></td>
+                            <td id="receiver" class="info"><span>Thiện Mỹ</span></td>
+                            <td id="address" class="info"><span>Cao Lãnh</span></td>
+                            <td id="order_status" class="info">
+                                <div class="status">
+                                    <span class="status_info">In Transport</span>
+                                </div>
+                            </td>
+                            <td id="date" class="info"><span>02/10/2023</span></td>
+                            <td id="total" class="info"><span>$350.00</span></td>
+                        </tr>
+
+                    </table>
+
+                    <div class="pagination">
+                        <div id="prev" class="pagination_item"><a href="#"><i class="ti-angle-double-left"></i></a></div>
+                        <div id="page_1" class="pagination_item"><a href="#">1</a></div>
+                        <div id="page_2" class="pagination_item"><a href="#">2</a></div>
+                        <div id="page_3" class="pagination_item"><a href="#">3</a></div>
+                        <div id="page_4" class="pagination_item"><a href="#">4</a></div>
+                        <div id="next" class="pagination_item"><a href="#"><i class="ti-angle-double-right"></i></a></div>
+
+                    </div>
+                </div>
+
+                <div  id="changePass_form" class="disappear">
+                    <div class="cur_pass info">
+                        <p class="info_title">Current Password</p>
+                        <input id="curpass_input" class="input" type="password">
+                        <div class="eye_btn" id="eye"  onclick="if (curpass_input.type == 'text') curpass_input.type = 'password'; else curpass_input.type = 'text';">
+                            <i class="ti-eye"></i>
+                        </div>
+                    </div>
+
+                    <div class="new_pass info">
+                        <p class="info_title">New Password</p>
+                        <input id="newpass_input" class="input" type="password">
+                        <div class="eye_btn" id="eye"  onclick="if (newpass_input.type == 'text') newpass_input.type = 'password'; else newpass_input.type = 'text';">
+                            <i class="ti-eye"></i>
+                        </div>
+                    </div>
+
+                    <div class="rep_pass info">
+                        <p class="info_title">Repeat New Password</p>
+                        <input id="reppass_input" class="input" type="password">
+                        <div class="eye_btn" id="eye"  onclick="if (reppass_input.type == 'text') reppass_input.type = 'password'; else reppass_input.type = 'text';">
+                            <i class="ti-eye"></i>
+                        </div>
+                    </div>
+
+                    <div class="save_btn">
+                        <p>Save Change</p>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+
+    </div>
+
+
+    <div id="footer">
+        <div id="social">
+                <div class="social_left">
+                    <h2 class="social_header">We Are Synonymous With Quality</h2>
+                    <h1 class="social_info">The Best Wine Made With <br> Carefully Selected Pinot Noir <br> Grapes</h1>
+                </div>
+
+                <div class="social_right">
+                    <a href="" class="ti-facebook social_icon"></a>
+                    <a href="" class="ti-twitter-alt social_icon"></a>
+                    <a href="" class="ti-youtube social_icon"></a>
+                    <a href="" class="ti-linkedin social_icon"></a>
+                    <a href="" class="ti-instagram social_icon"></a>
+                </div>
+        </div>
+
+        <div id="copy-right">
+            <p class="left_item">&copy;2023 &minus; By ThienMy & ThanhDanh</p>
+            <div class="right_item">
+                <a href="" class="more_info">Terms & Conditions</a>
+                <a href="" class="more_info">Refunds</a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+
+    // Load hình lên
+    function chooseImg(fileInput){
+        if(fileInput.files && fileInput.files[0]){
+            var reader = new FileReader();
+
+            reader.onload = function(e){
+                $('#user_img').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    }
+    var formCont = document.getElementById('form_container');
+
+    var active = document.getElementById('active');
+    var userInfo = document.getElementById('user-info');
+    var orderDetails = document.getElementById('order-details');
+    var changePass = document.getElementById('change-password');
+
+    var infoIcon = document.querySelector('.bi-person-circle');
+    var orderIcon = document.querySelector('.bi-card-checklist');
+    var changeIcon = document.querySelector('.bi-shield-lock');
+
+    var infoForm = document.getElementById('info_form');
+    var orderForm = document.getElementById('order_form');
+    var changeForm = document.getElementById('changePass_form')
+
+    function Info(item){
+
+        userInfo.style.fontSize = '16px';
+        orderDetails.style.fontSize = '14px';
+        changePass.style.fontSize = '14px';
+
+        infoIcon.style.fontSize = '25px';
+        orderIcon.style.fontSize = '20px';
+        changeIcon.style.fontSize = '20px';
+
+        userInfo.style.fontWeight = '600';
+        orderDetails.style.fontWeight = '500';
+        changePass.style.fontWeight = '500';
+        
+        userInfo.classList.add('nohover');
+        orderDetails.classList.remove('nohover');
+        changePass.classList.remove('nohover');
+
+        infoForm.classList.remove('disappear');
+        orderForm.classList.add('disappear');
+        changeForm.classList.add('disappear');
+
+        formCont.style.height = 'calc(100% - 200px)';
+
+    }
+
+    function Order(){
+        
+        userInfo.style.fontSize = '14px';
+        orderDetails.style.fontSize = '16px';
+        changePass.style.fontSize = '14px';
+
+        infoIcon.style.fontSize = '20px';
+        orderIcon.style.fontSize = '25px';
+        changeIcon.style.fontSize = '20px';
+
+        userInfo.style.fontWeight = '500';
+        orderDetails.style.fontWeight = '600';
+        changePass.style.fontWeight = '500';
+
+        userInfo.classList.remove('nohover');
+        orderDetails.classList.add('nohover');
+        changePass.classList.remove('nohover');
+
+        infoForm.classList.add('disappear');
+        orderForm.classList.remove('disappear');
+        changeForm.classList.add('disappear');
+
+        formCont.style.height = 'calc(100% - 200px)';
+
+
+    }
+
+    function Change(){
+        userInfo.style.fontSize = '14px';
+        orderDetails.style.fontSize = '14px';
+        changePass.style.fontSize = '16px';
+
+        infoIcon.style.fontSize = '20px';
+        orderIcon.style.fontSize = '20px';
+        changeIcon.style.fontSize = '25px';
+
+        userInfo.style.fontWeight = '500';
+        orderDetails.style.fontWeight = '500';
+        changePass.style.fontWeight = '600';
+
+        userInfo.classList.remove('nohover');
+        orderDetails.classList.remove('nohover');
+        changePass.classList.add('nohover');
+
+        infoForm.classList.add('disappear');
+        orderForm.classList.add('disappear');
+        changeForm.classList.remove('disappear');
+        changeForm.classList.add('appear');
+
+        formCont.style.height = '400px';
+        
+    }
+   
+
+    
+
+</script>
+</html>
