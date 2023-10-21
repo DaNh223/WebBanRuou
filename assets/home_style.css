@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 :root{
     --height_quality1: calc(100% - 180px);
     --height_quality2: calc(100% - 140px);
@@ -15,20 +16,24 @@
     --img_6: url('./img/img6.jpg') center center / cover no-repeat;
 }
 
-@keyframes floatIn {
+/* @keyframes floatInRight {
     from{
         transform: translateX(100%);
     }
-
     to{
         transform: translateX(0);
     }
-    
 }
 
-html{
-    overflow: hidden;
-}
+@keyframes floatInLeft {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+} */
+
 
 
 /* Phần header */
@@ -43,8 +48,7 @@ html{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 100px;
-        gap: 0.5rem;
+        padding: 20px 40px 20px 100px;
     }
 
     .sign{
@@ -62,7 +66,7 @@ html{
         .nav_item{
             position: relative;
             display: inline-block;
-            width: 120px;
+            width: 140px;
             height: 50px;
         }
 
@@ -81,9 +85,9 @@ html{
 
         }
 
-        .nav_item>a{
+        /* .nav_item>a{
             border-bottom: solid 2px var(--white_color);
-        }
+        } */
 
         .nav_item:hover>a{
             color: var(--white_color);
@@ -101,6 +105,10 @@ html{
             /* gap để chỉnh khoảng cách giữa các nút */
         }
 
+        .nav_btns{
+            gap: 2rem;
+        }
+
         .nav-arrow-down{
             font-size: 14px;
         }
@@ -110,7 +118,7 @@ html{
             top: 100%;
             left: 0; 
             z-index: 1;
-            width: 120%;
+            width: 110%;
             background-color: var(--white_color);
             box-shadow: 0 0 2px var(--gray_color);
 
@@ -135,7 +143,7 @@ html{
             visibility:visible;
         }
 
-        .wine_btn{
+        /* .wine_btn{
             position: relative;
             width: 170px;
             height: 60px;
@@ -157,7 +165,7 @@ html{
         
         .wine_btn:hover{
             transform: scale(1.1);
-        }
+        } */
 
         .cart_btn{
             color: var(--gold_color);
@@ -189,6 +197,33 @@ html{
         .cart_btn p, .cart_btn i, .cart_quantity{
             display: inline-block;
         }
+
+        .login_btn{
+            position: relative;
+            /* border-radius: 10px; */
+            width: 100px;
+            height: 30px;
+            /* margin-right: -30px; */
+        }
+
+        .login_btn a{
+            font-size: 18px;
+            position: absolute;
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+            line-height: 30px;
+            border-radius: 10px;
+            background-color: var(--wine_color);
+            color: var(--white_color);
+            transition-duration: .3s;
+        }
+        
+        .login_btn:hover a{
+            transform: scale(1.1);
+            background-color: var(--gold_color);
+            /* color: var(--white_color); */
+        }
         
     }
     
@@ -196,6 +231,7 @@ html{
 
 /* Phần content */
 #content{
+    overflow: hidden;
     /* Phần passionate */
     #passionate{
         position: relative;
@@ -203,12 +239,13 @@ html{
         height: 765px;
         background: linear-gradient(to bottom, rgba(116, 0, 69, 0.8), rgba(255, 255, 255, 0.7))
         ,url('./img/canhdong.jpg') top center / cover no-repeat ;
-
+        overflow: hidden;
         .passionate_left{
             position: absolute;
             color: var(--white_color);
             width: 50%;
             margin: 165px 0 100px 130px;
+            /* animation: floatInLeft 1s ease; */
 
             .passionate_header, 
             .passionate_slogan,
@@ -263,7 +300,8 @@ html{
             width: 600px;
             height: 600px;
             background: url('./img/lyruou.png') center center / cover no-repeat;
-            animation: floatIn ease .8s;
+            /* animation: floatInRight 1s ease; */
+
         }
     }
 

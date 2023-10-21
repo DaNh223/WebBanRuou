@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 
-
-@keyframes upPercent {
+/* @keyframes upPercent {
     from{
         width: 0;
     }
@@ -13,9 +12,7 @@
         width: var(--i);
     }
     
-}
-
-
+} */
 
 /* Phần header */
 #header{
@@ -29,8 +26,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 100px;
-        gap: 0.5rem;
+        padding: 20px 40px 20px 100px;
     }
 
     .sign{
@@ -48,7 +44,7 @@
         .nav_item{
             position: relative;
             display: inline-block;
-            width: 120px;
+            width: 140px;
             height: 50px;
         }
 
@@ -67,9 +63,9 @@
 
         }
 
-        .nav_item>a{
+        /* .nav_item>a{
             border-bottom: solid 2px var(--white_color);
-        }
+        } */
 
         .nav_item:hover>a{
             color: var(--white_color);
@@ -87,6 +83,10 @@
             /* gap để chỉnh khoảng cách giữa các nút */
         }
 
+        .nav_btns{
+            gap: 2rem;
+        }
+
         .nav-arrow-down{
             font-size: 14px;
         }
@@ -96,7 +96,7 @@
             top: 100%;
             left: 0; 
             z-index: 1;
-            width: 120%;
+            width: 110%;
             background-color: var(--white_color);
             box-shadow: 0 0 2px var(--gray_color);
 
@@ -121,7 +121,7 @@
             visibility:visible;
         }
 
-        .wine_btn{
+        /* .wine_btn{
             position: relative;
             width: 170px;
             height: 60px;
@@ -143,7 +143,7 @@
         
         .wine_btn:hover{
             transform: scale(1.1);
-        }
+        } */
 
         .cart_btn{
             color: var(--gold_color);
@@ -175,12 +175,42 @@
         .cart_btn p, .cart_btn i, .cart_quantity{
             display: inline-block;
         }
+
+        .login_btn{
+            position: relative;
+            /* border-radius: 10px; */
+            width: 100px;
+            height: 30px;
+            /* margin-right: -30px; */
+        }
+
+        .login_btn a{
+            font-size: 18px;
+            position: absolute;
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+            line-height: 30px;
+            border-radius: 10px;
+            background-color: var(--wine_color);
+            color: var(--white_color);
+            transition-duration: .3s;
+        }
+        
+        .login_btn:hover a{
+            transform: scale(1.1);
+            background-color: var(--gold_color);
+            /* color: var(--white_color); */
+        }
         
     }
     
 }
 
+
 #content{
+    overflow: hidden;
+
     #about{
         width: 100%;
         height: 350px;
@@ -276,35 +306,34 @@
 
                             .quality_percent{
                             border-radius: 3px;
-                                /* background-color: var(--redwine_color); */
-                                background-color: var(--purple_color);
-                                animation: upPercent ease 2s;
+                            background-color: var(--purple_color);
+                            /* animation: upPercent ease 2s; */
+
                             }
                         }
                     }
 
                     .flavor_1{
                         .quality_percent{
-                            width: var(--i);
+                            width: 70%;
                             height: 100%;
-                            
                         }
                     }
                     .flavor_2{
                         .quality_percent{
-                            width: var(--i);
+                            width: 90%;
                             height: 100%;
                         }
                     }
                     .flavor_3{
                         .quality_percent{
-                            width: var(--i);
+                            width: 60%;
                             height: 100%;
                         }
                     }
                     .flavor_4{
                         .quality_percent{
-                            width: var(--i);
+                            width: 80%;
                             height: 100%;
                         }
                     }

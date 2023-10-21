@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="./assets/blog_style.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./assets/color.css">
+    <link rel="stylesheet" href="./assets/animation.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <title>Document</title>
 </head>
 
 <body>
-    <!-- header -->
+    <!-- Header --> 
     <div id="header">
         <div class="nav_bar">
             <a href="./index.html" class="sign">
@@ -23,32 +24,33 @@
                     <li class="nav_item">
                         <a href="./index.html">Homepages</a>
                     </li>
-                    <li class="nav_item">
+                    <!-- <li class="nav_item">
                         <a href="./about.html">About Us</a>
-                    </li>
+                    </li> -->
 
                     <li class="nav_item nav_shop">
-                        <a href="#">Shop</a>
+                        <a href="./shop.html">Products</a>
 
-                        <ul class="subnav">
+                        <!-- <ul class="subnav">
                             <li class="subnav_item"><a href="./shop.html">Shop Page</a></li>
                             <li class="subnav_item"><a href="./checkout.html">Check Out</a></li>
                             <li class="subnav_item"><a href="./account.html">My Account</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
 
-                    <li class="nav_item">
+                    <!-- <li class="nav_item">
                         <a href="./blog.html">Blog</a>
-                    </li>
+                    </li> -->
                     <li class="nav_item">
                         <a href="./contact.html">Contact</a>
                     </li>
                 </ul>   
 
                 <div class="nav_btns">
-                    <div class="wine_btn">
+                    <!-- <div class="wine_btn">
                         <a href="404.html">Wine From $40</a>
-                    </div>
+                    </div> -->
+
                     <a href="./cart.html" style="text-decoration: none;">
                         <d class="cart_btn">
                             <p class="money">$0.00</p>
@@ -58,16 +60,21 @@
                             </div>
                         </d>
                     </a>
+
+                    <div class="login_btn">
+                        <a href="./account.html">Login</a>
+                    </div>
+                    
                 </div>
             </div>
 
         </div>
     </div>
-    <!-- end header -->
+    <!-- End header -->
 
     <div id="content">
         <div id="title">
-            <div class="title_content">
+            <div class="title_content show-on-scroll floatUp">
                 <h1 class="title_header">Our Blog</h1>
                 <p class="title_info">Những câu chuyện đầy tính nhân văn của chúng tôi</p>
             </div>
@@ -75,7 +82,7 @@
 
 
         <div id="first_person" class="person">
-            <div class="info_container">
+            <div class="info_container show-on-scroll left-to-right">
                 <div class="person_img"></div>
                 <div class="person_info">
                     <h1 class="person_name">Lê Hoàng Thiện Mỹ - Designer</h1>
@@ -93,7 +100,7 @@
         </div>
 
         <div id="second_person" class="person">
-            <div class="info_container">
+            <div class="info_container show-on-scroll right-to-left">
                 <div class="person_info">
                     <h1 class="person_name">Nguyễn Thành Danh - Developer</h1>
                     <h2 class="person_slogan">“You can have it all, just not all at the same time.”</h2>
@@ -133,15 +140,15 @@
         <div id="copy-right">
             <p class="left_item">&copy;2023 &minus; By ThienMy & ThanhDanh</p>
             <div class="right_item">
-                <a href="" class="more_info">Terms & Conditions</a>
-                <a href="" class="more_info">Refunds</a>
+                <a href="./404.html" class="more_info">Terms & Conditions</a>
+                <a href="./404.html" class="more_info">Refunds</a>
             </div>
         </div>
 </div>
     
 
 </body>
-
+    <script src="./assets/js/animation.js"></script>
 
 
 </html>

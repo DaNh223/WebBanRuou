@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/shop_style.css">
     <link rel="stylesheet" href="./assets/color.css">
+    <link rel="stylesheet" href="./assets/animation.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <title>Document</title>
 </head>
 <body>
+    <!-- Header --> 
     <div id="header">
         <div class="nav_bar">
             <a href="./index.html" class="sign">
@@ -19,32 +21,33 @@
                     <li class="nav_item">
                         <a href="./index.html">Homepages</a>
                     </li>
-                    <li class="nav_item">
+                    <!-- <li class="nav_item">
                         <a href="./about.html">About Us</a>
-                    </li>
+                    </li> -->
 
                     <li class="nav_item nav_shop">
-                        <a href="#">Shop</a>
+                        <a href="./shop.html">Products</a>
 
-                        <ul class="subnav">
+                        <!-- <ul class="subnav">
                             <li class="subnav_item"><a href="./shop.html">Shop Page</a></li>
                             <li class="subnav_item"><a href="./checkout.html">Check Out</a></li>
                             <li class="subnav_item"><a href="./account.html">My Account</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
 
-                    <li class="nav_item">
+                    <!-- <li class="nav_item">
                         <a href="./blog.html">Blog</a>
-                    </li>
+                    </li> -->
                     <li class="nav_item">
                         <a href="./contact.html">Contact</a>
                     </li>
                 </ul>   
 
                 <div class="nav_btns">
-                    <div class="wine_btn">
+                    <!-- <div class="wine_btn">
                         <a href="404.html">Wine From $40</a>
-                    </div>
+                    </div> -->
+
                     <a href="./cart.html" style="text-decoration: none;">
                         <d class="cart_btn">
                             <p class="money">$0.00</p>
@@ -54,16 +57,21 @@
                             </div>
                         </d>
                     </a>
+
+                    <div class="login_btn">
+                        <a href="./account.html">Login</a>
+                    </div>
+                    
                 </div>
             </div>
 
         </div>
     </div>
+    <!-- End header -->
 
     <div id="content">
-
         <div id="shop">
-            <div class="shop_content">
+            <div class="shop_content show-on-scroll floatUp">
                 <h1 class="shop_header">Shop Products</h1>
                 <p class="shop_info">Discover Great Wines And Flavors In Our Winery Shop!</p>
             </div>
@@ -154,7 +162,6 @@
                             <p>Add To Cart</p>
                         </div>
                     </div>
-
                     
                 </div>
             </div>
@@ -181,8 +188,8 @@
         <div id="copy-right">
             <p class="left_item">&copy;2023 &minus; By ThienMy & ThanhDanh</p>
             <div class="right_item">
-                <a href="" class="more_info">Terms & Conditions</a>
-                <a href="" class="more_info">Refunds</a>
+                <a href="./404.html" class="more_info">Terms & Conditions</a>
+                <a href="./404.html" class="more_info">Refunds</a>
             </div>
         </div>
 </div>
@@ -213,7 +220,7 @@
 
 
 </div>
-
+<script src="./assets/js/animation.js"></script>
 <script>
 
     function toast({
@@ -284,25 +291,21 @@
     var addBtns = document.querySelectorAll('.add_btn');
     addBtns.forEach(function(item){
         item.addEventListener('click',showSuccessToast);
-    })
-
+    });
 
     var productInfo = document.querySelectorAll('.product_info');
-    
-    
-    function showProduct(){
+
+    productInfo.forEach(function(item){
+        item.addEventListener('click', function(){
             localStorage.setItem('imgSrc', this.querySelector('.product_img').getAttribute('src'));
             localStorage.setItem('productName', this.querySelector('.product_name').innerHTML);
             localStorage.setItem('productPrice', this.querySelector('.product_price').innerHTML);
 
 
             console.log(localStorage);
-    }
-
-    productInfo.forEach(function(item){
-        item.addEventListener('click', showProduct)
+        })
     })
-    
+
 
 
 </script>

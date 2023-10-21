@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="./assets/about_style.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./assets/color.css">
-
+    <link rel="stylesheet" href="./assets/animation.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <title>Document</title>
 </head>
 
 <body>
-    <!-- header -->
-    <div id="header">
+     <!-- Header --> 
+     <div id="header">
         <div class="nav_bar">
             <a href="./index.html" class="sign">
             </a>
@@ -23,34 +23,34 @@
                     <li class="nav_item">
                         <a href="./index.html">Homepages</a>
                     </li>
-                    <li class="nav_item">
+                    <!-- <li class="nav_item">
                         <a href="./about.html">About Us</a>
-                    </li>
+                    </li> -->
 
                     <li class="nav_item nav_shop">
-                        <a href="#">Shop</a>
+                        <a href="./shop.html">Products</a>
 
-                        <ul class="subnav">
+                        <!-- <ul class="subnav">
                             <li class="subnav_item"><a href="./shop.html">Shop Page</a></li>
                             <li class="subnav_item"><a href="./checkout.html">Check Out</a></li>
                             <li class="subnav_item"><a href="./account.html">My Account</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
 
-                    <li class="nav_item">
+                    <!-- <li class="nav_item">
                         <a href="./blog.html">Blog</a>
-                    </li>
+                    </li> -->
                     <li class="nav_item">
                         <a href="./contact.html">Contact</a>
                     </li>
                 </ul>   
 
                 <div class="nav_btns">
-                    <div class="wine_btn">
+                    <!-- <div class="wine_btn">
                         <a href="404.html">Wine From $40</a>
-                    </div>
+                    </div> -->
 
-                   <a href="./cart.html" style="text-decoration: none;">
+                    <a href="./cart.html" style="text-decoration: none;">
                         <d class="cart_btn">
                             <p class="money">$0.00</p>
                             <i class="ti-shopping-cart"></i>
@@ -59,17 +59,22 @@
                             </div>
                         </d>
                     </a>
+
+                    <div class="login_btn">
+                        <a href="./account.html">Login</a>
+                    </div>
+                    
                 </div>
             </div>
 
         </div>
     </div>
-    <!-- end header -->
+    <!-- End header -->
 
     <!-- Content -->
     <div id="content">
         <div id="about">
-            <div class="about_content">
+            <div class="about_content show-on-scroll floatUp">
                 <h1 class="about_header">About Us</h1>
                 <p class="about_info">Our Wine Reflects Our Passion, Quality, & Rich History Of The Land.</p>
             </div>
@@ -77,7 +82,7 @@
 
         <div id="flavor">
             <div class="flavor_content">
-                <div class="flavor_left">
+                <div class="flavor_left show-on-scroll floatUp">
                     <p class="flavor_header">Delicious Flavor</p>
                     <h1 class="flavor_slogan">More Than Wine</h1>
                     <p class="flavor_info">Our grapes are grown with great care by highly qualified professionals. The
@@ -89,30 +94,30 @@
                         hard work. We have been a reference in the wine industry for many years. We are certain that you
                         will love our wines, so please use them sparingly.</p>
                 </div>
-                <div class="flavor_right">
+                <div class="flavor_right show-on-scroll floatUp">
                     <div class="flavor_list">
                         <div class="flavor_item flavor_1">
                             <p class="flavor_name">Type Of Grapes</p>
                             <div class="quality_bar">
-                                <div class="quality_percent" style="--i: 70%"></div>
+                                <div class="quality_percent show-on-scroll upPercent" style="--i: 70%"></div>
                             </div>
                         </div>
                         <div class="flavor_item flavor_2">
                             <p class="flavor_name">Satisfaction Level</p>
                             <div class="quality_bar">
-                                <div class="quality_percent" style="--i: 90%"></div>
+                                <div class="quality_percent show-on-scroll upPercent" style="--i: 90%"></div>
                             </div>
                         </div>
                         <div class="flavor_item flavor_3">
                             <p class="flavor_name">Return</p>
                             <div class="quality_bar">
-                                <div class="quality_percent" style="--i: 60%"></div>
+                                <div class="quality_percent show-on-scroll upPercent" style="--i: 60%"></div>
                             </div>
                         </div>
                         <div class="flavor_item flavor_4">
                             <p class="flavor_name">Climate</p>
                             <div class="quality_bar">
-                                <div class="quality_percent" style="--i: 80%"></div>
+                                <div class="quality_percent show-on-scroll upPercent" style="--i: 80%"></div>
                             </div>
                         </div>
                     </div>
@@ -126,7 +131,7 @@
                     <div class="person">
                         <div class="person_img"></div>
                         <div class="person_info">
-                            <h3 class="person_name">Thành Danh</h3>
+                            <h3 class="person_name">Danh Đẹp Trai</h3>
                             <p class="person_duty">CEO</p>
                         </div>
                     </div>
@@ -138,12 +143,12 @@
                     <div class="person">
                         <div class="person_img"></div>
                         <div class="person_info">
-                            <h3 class="person_name">Thiện Mỹ</h3>
+                            <h3 class="person_name">Mỹ Đẹp Trai</h3>
                             <p class="person_duty">CEO</p>
                         </div>
                     </div>
                     <div class="person_slogan">
-                        <p>Mua rượu đi bạn ơi</p>
+                        <p>Mua rượu đi ní</p>
                     </div>
                 </div>
             </div>
@@ -155,7 +160,7 @@
 
         <div id="dedicate">
             <div class="dedicate_content">
-                <div class="dedicate_left">
+                <div class="dedicate_left  show-on-scroll floatUp">
                     <p class="dedicate_header">Dedication Delivers</p>
                     <h1 class="dedicate_slogan">Quality & <br> Sophistication In Years Of Dedication </h1>
                     <p class="dedicate_info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -171,12 +176,12 @@
                         <a href="">Discover More</a>
                     </div>
                 </div>
-                <div class="dedicate_right"></div>
+                <div class="dedicate_right  show-on-scroll right-to-left"></div>
             </div>
         </div>
 
         <div id="discover">
-            <div class="discover_content">
+            <div class="discover_content show-on-scroll floatUp">
                 <h1 class="discover_header">Discover Our Wines</h1>
                 <div class="shop_btn">
                     <a href="">See Shop</a>
@@ -185,7 +190,7 @@
         </div>
 
         <div id="quality">
-            <div class="quality_container">
+            <div class="quality_container show-on-scroll floatUp">
                 <div class="quality_left">
                     <div class="quality_item">
                         <div class="item_icon icon1"></div>
@@ -242,8 +247,8 @@
         <div id="copy-right">
             <p class="left_item">&copy;2023 &minus; By ThienMy & ThanhDanh</p>
             <div class="right_item">
-                <a href="" class="more_info">Terms & Conditions</a>
-                <a href="" class="more_info">Refunds</a>
+                <a href="./404.html" class="more_info">Terms & Conditions</a>
+                <a href="./404.html" class="more_info">Refunds</a>
             </div>
         </div>
 </div>
@@ -252,7 +257,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+    <script src="./assets/js/animation.js"></script>
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
