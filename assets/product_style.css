@@ -10,7 +10,7 @@
     width: 100%;
     height: 100px;
     background-color: var(--white_color);
-
+    box-shadow: 0 0 3px var(--gray_color);
 /* Các phần tử bên trong header */
     .nav_bar{
         height: 100px;

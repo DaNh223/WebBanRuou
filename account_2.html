@@ -73,7 +73,7 @@
 
     <div id="content">
         <div id="title">
-            <div class="title_content show-on-scroll floatUp">
+            <div class="title_content show-on-scroll floatUp autoAnimation">
                 <h1 class="title_header">My Account</h1>
                 <p class="title_info">Get Winery News, Promotions, & Tastings Exclusively.</p>
             </div>
@@ -151,7 +151,7 @@
                             <td class="info total"><span>$350.00</span></td>
                             <td class="info order_status">
                                 <div class="status">
-                                    <span class="status_info">In Transport</span>
+                                    <span class="status_info">Delivering</span>
                                 </div>
                             </td>
 
@@ -184,7 +184,7 @@
                             <td class="info total"><span>$350.00</span></td>
                             <td class="info order_status">
                                 <div class="status">
-                                    <span class="status_info">Delivered</span>
+                                    <span class="status_info">Complete</span>
                                 </div>
                             </td>
 
@@ -412,13 +412,13 @@
             
         }
 
-        else if(item.innerHTML == 'In Transport'){
+        else if(item.innerHTML == 'Delivering'){
             item.classList.add('transport');
             var ancestor = item.closest('.order_info');
             ancestor.classList.add('no_action');
         }
 
-        else if(item.innerHTML == 'Delivered'){
+        else if(item.innerHTML == 'Complete'){
             item.classList.add('delivered');
             var ancestor = item.closest('.order_info');
             ancestor.classList.add('no_action');

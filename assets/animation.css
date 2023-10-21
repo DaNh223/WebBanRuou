@@ -40,6 +40,15 @@
     animation: upPercent ease 2s;
 }
 
+.autoAnimation{
+    animation: floatUp ease 1s forwards;
+}
+
+.autoAnimation_2{
+    animation: right-to-left ease 1s forwards;
+}
+
+
 @keyframes upPercent {
     from{
         width: 0;
@@ -48,4 +57,26 @@
         width: var(--i);
     }
     
+}
+
+@keyframes floatUp {
+    from{
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes right-to-left {
+    from{
+        transform: translateX(200%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

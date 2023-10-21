@@ -9,6 +9,8 @@ function toggleAnimation(item){
         item.classList.add('start');
     }else{
         item.classList.remove('start');
+        item.classList.remove('autoAnimation');
+        item.classList.remove('autoAnimation_2');
 
     }
 
